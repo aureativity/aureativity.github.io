@@ -48,7 +48,7 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     image(img2, mouseX-270, mouseY-270);
     
   } else if (toolChoice == '3') { // basket
-    image(img3, mouseX-270, mouseY-180);
+    image(img3, mouseX-120, mouseY-110);
     
   } else if (toolChoice == '4') { // plate
     image(img4, mouseX-100, mouseY-30);
