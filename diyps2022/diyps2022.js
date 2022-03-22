@@ -6,15 +6,22 @@ var lastscreenshot=61; // last screenshot never taken
 
 function preload() {
 // preload() runs once, it may make you wait
-//  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-  //img = loadImage('https://dma-git.github.io/images/74.png');
   img = loadImage('https://aureativity.github.io/images/peach.png');
-  imgS = loadImage('https://aureativity.github.io/images/strawbcake.png');
+  img5 = loadImage('https://aureativity.github.io/images/strawbcake.png');
+  img3 = loadImage('https://aureativity.github.io/images/basket.png');
+  img2 = loadImage('https://aureativity.github.io/images/blanket.png');
+  img1 = loadImage('https://aureativity.github.io/images/grass.png');
+  img7 = loadImage('https://aureativity.github.io/images/burger.png');
+  img4 = loadImage('https://aureativity.github.io/images/plate.png');
+  img8 = loadImage('https://aureativity.github.io/images/bento.png');
+  img9 = loadImage('https://aureativity.github.io/images/sushi.png');
+  img0 = loadImage('https://aureativity.github.io/images/pink.png');
+  imgB = loadImage('https://aureativity.github.io/images/purple.png');
 }
 
 function setup() {
-createCanvas(1000, 700);  // canvas size
+createCanvas(800, 800);  // canvas size
 background(screenbg);   // use our background screen color
 
 }
@@ -34,53 +41,40 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // just make sure each key option has the a stroke or fill and then what type of 
   // graphic function
 
- if (toolChoice == 's' || toolChoice == 'S') { // strawberry cake
-    image(imgS, mouseX-250, mouseY-200);
+ if (toolChoice == '1') {  // grass
+    image(img1, 0, 0, 800, 800);
     
-  } else if (toolChoice == '2') { // second tool
-    noStroke(0);
-    fill(random(255), random(255), random(255), random(255));
-    ellipse(mouseX, mouseY, 20, 20);
+  } else if (toolChoice == '2') { // blanket
+    image(img2, mouseX-270, mouseY-270);
     
-  } else if (toolChoice == '3') { // third tool
-    stroke(300, 100, 0, 80);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+  } else if (toolChoice == '3') { // basket
+    image(img3, mouseX-270, mouseY-180);
     
-  } else if (toolChoice == '4') {
-    stroke(0, 0, 255);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+  } else if (toolChoice == '4') { // plate
+    image(img4, mouseX-100, mouseY-30);
     
-  } else if (key == '5') { // this tool calls a function
-    stroke(0, 0, 255);
-    testbox(20, 20, 200);
-    testbox(200, 20, 20);
+  } else if (toolChoice == '5') { // strawberry cake
+    image(img5, mouseX-75, mouseY-60);
     
- // make testbox do something!
- //   line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '6') {
-
-    stroke(200);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '7') {
-
-    fill(100, 200, 100);
-    rect(mouseX, mouseY, 20, 20);
-  } else if (toolChoice == '8') {
-
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 20, 20);
-  } else if (toolChoice == '9') {
-
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 40, 40);
-  } else if (toolChoice == '0') {
-    stroke(0, 0);
-    fill(random(255), random(255), random(255), random(255));
-    rect(mouseX, mouseY, 200, 150);
-  } else if (toolChoice == 'g' || toolChoice == 'G') { // peach
-    image(img, mouseX-120, mouseY-120);
+  } else if (toolChoice == '6') { // peach
+    image(img, mouseX-40, mouseY-40);
     
-  }
+  } else if (toolChoice == '7') { // burger
+    image(img7, mouseX-60, mouseY-60);
+    
+  } else if (toolChoice == '8') { // bento
+    image(img8, mouseX-95, mouseY-55);
+    
+  } else if (toolChoice == '9') { // sushi
+    image(img9, mouseX-90, mouseY-70);
+    
+  } else if (toolChoice == '0') { // pink boba
+    image(img0, mouseX-50, mouseY-90);
+    
+  } else if (toolChoice == '-') { // purple boba
+    image(imgB, mouseX-55, mouseY-90);
+    
+  } 
  }
  
 function testbox(r, g, b) {
