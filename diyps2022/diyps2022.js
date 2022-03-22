@@ -9,12 +9,12 @@ function preload() {
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
   //img = loadImage('https://dma-git.github.io/images/74.png');
-  img = loadImage('peach.png');
-  imgS = loadImage('strawbcake.gif');
+  img = loadImage('https://aureativity.github.io/images/peach.png');
+  imgS = loadImage('https://aureativity.github.io/images/strawbcake.png');
 }
 
 function setup() {
-createCanvas(700, 700);  // canvas size
+createCanvas(1000, 700);  // canvas size
 background(screenbg);   // use our background screen color
 
 }
